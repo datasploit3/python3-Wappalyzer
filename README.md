@@ -7,7 +7,7 @@ Use code from https://github.com/chorsley/python-Wappalyzer, make it suitable fo
 ## Usage
 
 ```
->>> from Wappalyzer import WebPage
+>>> from Wappalyzer.WebPage import WebPage
 >>> WebPage("https://github.com").info()
 {'apps': 'Twitter Bootstrap', 'title': "The world's leading software development platform · GitHub"}
 ```
