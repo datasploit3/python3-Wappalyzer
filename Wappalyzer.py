@@ -2,10 +2,11 @@
 # -*- coding:utf-8 -*-
 
 import re
+import os
 import json
-import requests
-from bs4 import BeautifulSoup
+import pathlib
 
+DATA = os.path.join(pathlib.Path(__file__).parent.absolute(), "data", "apps.json")
 
 class WebPage(object):
     """
@@ -27,7 +28,10 @@ class WebPage(object):
         headers : dict
             The HTTP response headers
         """
-        response = requests.get(url, verify=verify, timeout=30)
+        response = 
+        
+        
+        .get(url, verify=verify, timeout=30)
         self.url = url
         # if use response.text, could have some error
         self.html = response.content.decode('utf8')
@@ -76,7 +80,7 @@ class Wappalyzer(object):
             with open(apps_file, 'r') as fd:
                 obj = json.load(fd)
         else:
-            with open("./apps.json", 'r') as fd:
+            with open(DATA, 'r') as fd:
                 obj = json.load(fd)
 
         self.categories = obj['categories']
